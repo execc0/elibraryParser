@@ -90,8 +90,9 @@ public class FileWorker {
             logger.info("Данные сохранены в файл {}", path);
             System.out.println("Данные успешно сохранены в файл:" + path);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.error("Ошибка сохранения файла: ", e);
+            System.out.println("Ошибка сохранения данных в файл: " + path);
         }
     }
 }
