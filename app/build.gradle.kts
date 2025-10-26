@@ -10,9 +10,6 @@ dependencies {
     implementation("org.apache.commons:commons-text")
     implementation(project(":utilities"))
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
     implementation(fileTree("libs") {
         include("*.jar")  // jsoup-1.16.1.jar
     })
@@ -34,8 +31,24 @@ dependencies {
     testImplementation(files(
         "libs/JUnit/junit-jupiter-api-5.13.4.jar",
         "libs/JUnit/junit-jupiter-engine-5.13.4.jar",
-        "libs/JUnit/junit-platform-commons-1.13.4.jar"
+        "libs/JUnit/junit-platform-commons-1.13.4.jar",
+        "libs/JUnit/opentest4j-1.3.0.jar",
+        "libs/JUnit/apiguardian-api-1.1.2.jar",
+        "libs/JUnit/junit-platform-engine-1.13.4.jar",
+        "libs/JUnit/junit-jupiter-params-5.13.4.jar"
     ))
+
+    testRuntimeOnly(files(
+        "libs/JUnit/junit-platform-launcher-1.13.4.jar"
+    ))
+}
+
+repositories {
+    mavenCentral()
+
+    flatDir {
+        dirs("libs")
+    }
 }
 
 application {
