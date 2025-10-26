@@ -1,9 +1,9 @@
+package org.example.app;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.*;
-
-package org.example.app;
 
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
@@ -15,10 +15,11 @@ public class Main {
             String authorsFilePath = getValidFilePath("Введите абсолютный путь до файла с authorsID: ");
             List<String> authors = FileWorker.readFile(authorsFilePath);
 
-            if (authors.isEmpty()) {
+            while (authors.isEmpty()) {
                 System.out.println("Не удалось прочитать авторов из файла: " + authorsFilePath);
-                logger.error("Не удалось прочитать авторов из файла: {}", authorsFilePath);
-                return;
+                logger.warn("Не удалось прочитать авторов из файла: {}", authorsFilePath);
+                authorsFilePath = getValidFilePath("Введите абсолютный путь до файла с authorsID: ");
+                authors = FileWorker.readFile(authorsFilePath);
             }
 
             Map<String, AuthorData> authorsData = processAuthors(authors);
@@ -70,7 +71,7 @@ public class Main {
     /**
      * Обрабатывает каждый authorID для получения подробной информации.
      * <p>
-     * Перебирает все значения переданного списка и через класс SiteParser
+     * Перебирает все значения переданного списка и через класс {@link SiteParser}
      * получает подробную информацию о каждом авторе, сохраняя все это в
      * интерфейс Map, для дальнейшего удобного сохранения в json формат.
      * </p>
@@ -78,11 +79,11 @@ public class Main {
      * @since 2025-10-25
      * @param authors список, содержащий authorID.
      * @return возвращает Map, содержащий authorID (ключ) и информацию о данном авторе
-     * в виде объекта класса AuthorData.
+     * в виде объекта класса {@link AuthorData}.
      */
     private static Map<String, AuthorData> processAuthors(List<String> authors) {
         SiteParser siteParser = new SiteParser();
-        Map<String, AuthorData> authorsData = new LinkedHashMap<>();
+        Map<String, AuthorData> authorsData = new HashMap<>();
 
         AuthorData authorData;
         for (String authorId : authors) {

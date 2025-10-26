@@ -9,9 +9,46 @@ plugins {
 dependencies {
     implementation("org.apache.commons:commons-text")
     implementation(project(":utilities"))
+
+    implementation(fileTree("libs") {
+        include("*.jar")  // jsoup-1.16.1.jar
+    })
+
+    // Jackson библиотека
+    implementation(files(
+        "libs/Jackson/jackson-core-2.19.2.jar",
+        "libs/Jackson/jackson-databind-2.19.2.jar",
+        "libs/Jackson/jackson-annotations-2.19.2.jar"
+    ))
+
+    // Log4j библиотека
+    implementation(files(
+        "libs/log4j/log4j-api-2.25.2.jar",
+        "libs/log4j/log4j-core-2.25.2.jar"
+    ))
 }
 
 application {
     // Define the main class for the application.
     mainClass = "org.example.app.Main"
+}
+
+tasks.jar {
+    manifest {
+        attributes(mapOf(
+            "Main-Class" to "org.example.app.Main",
+            "Implementation-Title" to "ELibrary Parser"
+        ))
+    }
+
+    // Включаем все зависимости в JAR
+    val dependencies = configurations.runtimeClasspath.get()
+        .map { if (it.isDirectory) it else zipTree(it) }
+
+    from(dependencies)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    // ЯВНО указываем зависимости на другие модули
+    dependsOn(":utilities:jar")
+    dependsOn(":list:jar")  // Добавьте если используете
 }
