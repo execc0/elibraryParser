@@ -10,6 +10,9 @@ dependencies {
     implementation("org.apache.commons:commons-text")
     implementation(project(":utilities"))
 
+    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
     implementation(fileTree("libs") {
         include("*.jar")  // jsoup-1.16.1.jar
     })
@@ -25,6 +28,13 @@ dependencies {
     implementation(files(
         "libs/log4j/log4j-api-2.25.2.jar",
         "libs/log4j/log4j-core-2.25.2.jar"
+    ))
+
+    // JUnit библиотека
+    testImplementation(files(
+        "libs/JUnit/junit-jupiter-api-5.13.4.jar",
+        "libs/JUnit/junit-jupiter-engine-5.13.4.jar",
+        "libs/JUnit/junit-platform-commons-1.13.4.jar"
     ))
 }
 

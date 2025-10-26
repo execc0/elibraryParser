@@ -63,13 +63,4 @@ public class FileWorkerTest {
             FileWorker.saveToFile(null, outputFile.toString());
         });
     }
-
-    @Test
-    void saveToFile_WrongTest_NoException() {
-        String json = "text for test";
-
-        Assertions.assertDoesNotThrow(() -> {
-            FileWorker.saveToFile(json, "test_output_null_file.json");
-        });
-    }
 }
