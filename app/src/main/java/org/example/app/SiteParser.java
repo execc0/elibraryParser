@@ -7,10 +7,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Класс для парсинга информации с сайта elibrary.
@@ -91,7 +88,12 @@ public class SiteParser {
      * @param authorID UID автора, необходимое для получения информации о нем.
      * @return Объект класса {@link Document} для дальнейшего парсинга страницы.
      */
-    private Document connectElibrary(String authorID) {
+    protected Document connectElibrary(String authorID) {
+        if (!authorID.matches("\\d+")) {
+            logger.warn("Переданный authorID не является корректным");
+            return null;
+        }
+
         try {
             String url = ELIBRARY_URL_TEMPLATE + authorID;
             logger.info("Выполнение запроса к: {}", url);
@@ -118,7 +120,7 @@ public class SiteParser {
      * @param document объект класса {@link Document}, содержащий html код страницы.
      * @param authorData объект класса {@link AuthorData} для хранения информации об авторе.
      */
-    private void extractAuthorName(Document document, AuthorData authorData) {
+    protected void extractAuthorName(Document document, AuthorData authorData) {
         try {
 
             String title = document.title();
@@ -134,7 +136,7 @@ public class SiteParser {
             }
         } catch (Exception e) {
             logger.warn("Ошибка при извлечении имени автора: {}", e.getMessage());
-            authorData.setName("Неизвестнл");
+            authorData.setName("Неизвестно");
         }
     }
 
@@ -151,7 +153,7 @@ public class SiteParser {
      * @param articlesRef список для хранения информации о цитированиях статей автора для дальнейшего
      *                    вычисления индекса Хирша.
      */
-    private void parsePublicationTable(Element publicationsTable, AuthorData authorData, List<Integer> articlesRef) {
+    protected void parsePublicationTable(Element publicationsTable, AuthorData authorData, List<Integer> articlesRef) {
         Elements publicationRows = publicationsTable.select(PUBLICATION_ROW_SELECTOR);
         Publication publication;
 
@@ -180,20 +182,28 @@ public class SiteParser {
      *                    вычисления индекса Хирша.
      * @param authorData объект класса {@link AuthorData} для хранения информации об авторе.
      */
-    private void calcHIndex(List<Integer> articlesRef, AuthorData authorData) {
+    protected void calcHIndex(List<Integer> articlesRef, AuthorData authorData) {
+        if (articlesRef == null) {
+            logger.warn("Для автора {} не был вычислен индекс Хирша.", authorData.getAuthorID());
+            System.out.println("Для автора " + authorData.getAuthorID() + "не был вычислен индекс Хирша.");
+            authorData.setHIndex(0);
+            return;
+        }
+
         Integer[] array = articlesRef.toArray(new Integer[0]);
         Arrays.sort(array,  Collections.reverseOrder());
 
-        if (array.length == 1) {
+        if (array.length <= 1) {
             authorData.setHIndex(0);
             return;
         }
 
         for (int i = 0; i < array.length; i++) {
-            if (i > array[i]) {
-                authorData.setHIndex(i - 1);
+            if (i + 1 > array[i]) {
+                authorData.setHIndex(i);
                 break;
             }
         }
     }
 }
+

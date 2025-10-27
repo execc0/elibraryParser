@@ -60,7 +60,7 @@ public class Publication {
             if (fontElements.size() > 1) {
                 StringBuilder details = new StringBuilder();
 
-                for (int i = 1; i < fontElements.size(); i++) {
+                for (int i = 1; i < fontElements.size(); i++) { // TODO: тут i была равна 1...
 
                     String text = fontElements.get(i).text().trim();
                     if (!text.isEmpty()) {

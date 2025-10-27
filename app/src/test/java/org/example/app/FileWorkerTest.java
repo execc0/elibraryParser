@@ -57,7 +57,7 @@ public class FileWorkerTest {
 
     @Test
     void saveToFile_NullArgument_NoException() {
-        Path outputFile = tempDir.resolve("test_output_null_file.json");
+        Path outputFile = tempDir.resolve("test_output_nullArg_file.json");
 
         Assertions.assertDoesNotThrow(() -> {
             FileWorker.saveToFile(null, outputFile.toString());

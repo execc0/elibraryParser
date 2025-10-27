@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -88,7 +87,7 @@ public class FileWorker {
         try (FileWriter writer = new FileWriter(path)) {
             writer.write(json);
             logger.info("Данные сохранены в файл {}", path);
-            System.out.println("Данные успешно сохранены в файл:" + path);
+            System.out.println("Данные успешно сохранены в файл: " + path);
 
         } catch (Exception e) {
             logger.error("Ошибка сохранения файла: ", e);

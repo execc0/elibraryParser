@@ -12,25 +12,31 @@ public class Main {
         logger.info("Приложение запущено");
 
         try {
-            String authorsFilePath = getValidFilePath("Введите абсолютный путь до файла с authorsID: ");
-            List<String> authors = FileWorker.readFile(authorsFilePath);
+            while (true) {
+                String authorsFilePath = getValidFilePath("Введите абсолютный путь до файла с authorsID или q для выхода: ");
+                if (authorsFilePath.equals("q"))
+                    break;
 
-            while (authors.isEmpty()) {
-                System.out.println("Не удалось прочитать авторов из файла: " + authorsFilePath);
-                logger.warn("Не удалось прочитать авторов из файла: {}", authorsFilePath);
-                authorsFilePath = getValidFilePath("Введите абсолютный путь до файла с authorsID: ");
-                authors = FileWorker.readFile(authorsFilePath);
+                List<String> authors = FileWorker.readFile(authorsFilePath);
+
+                while (authors.isEmpty()) {
+                    System.out.println("Не удалось прочитать авторов из файла: " + authorsFilePath);
+                    logger.warn("Не удалось прочитать авторов из файла: {}", authorsFilePath);
+                    authorsFilePath = getValidFilePath("Введите абсолютный путь до файла с authorsID: ");
+                    authors = FileWorker.readFile(authorsFilePath);
+                }
+
+                Map<String, AuthorData> authorsData = processAuthors(authors);
+
+                String resultFilePath = getValidFilePath("Введите абсолютный путь до файла c результатами или q для выхода: ");
+                if (resultFilePath.equals("q"))
+                    break;
+
+                ObjectMapper mapper = new ObjectMapper();
+                String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(authorsData);
+
+                FileWorker.saveToFile(json, resultFilePath);
             }
-
-            Map<String, AuthorData> authorsData = processAuthors(authors);
-
-            String resultFilePath = getValidFilePath("Введите абсолютный путь до файла c результатами: ");
-
-            ObjectMapper mapper = new ObjectMapper();
-            String json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(authorsData);
-
-            FileWorker.saveToFile(json, resultFilePath);
-
         } catch (Exception e) {
             logger.error("Критическая ошибка при выполнении приложения", e);
         } finally {
@@ -46,11 +52,14 @@ public class Main {
      * чтобы не допустить пустую, как путь к файлу.
      * </p>
      *
-     * @since 2025-10-25
      * @param text текст, который будет выведен для пользователя перед вводом.
      * @return строка, содержащая путь.
+     * @since 2025-10-25
      */
-    private static String getValidFilePath(String text) {
+    protected static String getValidFilePath(String text) {
+        if (text == null)
+            text = "";
+
         Scanner scanner = new Scanner(System.in);
         String filePath;
 
@@ -76,12 +85,12 @@ public class Main {
      * интерфейс Map, для дальнейшего удобного сохранения в json формат.
      * </p>
      *
-     * @since 2025-10-25
      * @param authors список, содержащий authorID.
      * @return возвращает Map, содержащий authorID (ключ) и информацию о данном авторе
      * в виде объекта класса {@link AuthorData}.
+     * @since 2025-10-25
      */
-    private static Map<String, AuthorData> processAuthors(List<String> authors) {
+    protected static Map<String, AuthorData> processAuthors(List<String> authors) {
         SiteParser siteParser = new SiteParser();
         Map<String, AuthorData> authorsData = new HashMap<>();
 
