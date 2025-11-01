@@ -9,9 +9,108 @@ plugins {
 dependencies {
     implementation("org.apache.commons:commons-text")
     implementation(project(":utilities"))
+
+    implementation(fileTree("libs") {
+        include("*.jar")  // jsoup-1.16.1.jar
+    })
+
+    // Jackson библиотека
+    implementation(files(
+        "libs/Jackson/jackson-core-2.19.2.jar",
+        "libs/Jackson/jackson-databind-2.19.2.jar",
+        "libs/Jackson/jackson-annotations-2.19.2.jar"
+    ))
+
+    // Log4j библиотека
+    implementation(files(
+        "libs/log4j/log4j-api-2.25.2.jar",
+        "libs/log4j/log4j-core-2.25.2.jar"
+    ))
+
+    // JUnit библиотека
+    testImplementation(files(
+        "libs/JUnit/junit-jupiter-api-5.13.4.jar",
+        "libs/JUnit/junit-jupiter-engine-5.13.4.jar",
+        "libs/JUnit/junit-platform-commons-1.13.4.jar",
+        "libs/JUnit/opentest4j-1.3.0.jar",
+        "libs/JUnit/apiguardian-api-1.1.2.jar",
+        "libs/JUnit/junit-platform-engine-1.13.4.jar",
+        "libs/JUnit/junit-jupiter-params-5.13.4.jar"
+    ))
+
+    testRuntimeOnly(files(
+        "libs/JUnit/junit-platform-launcher-1.13.4.jar"
+    ))
+
+    implementation(fileTree("libs/javafx-sdk-25.0.1/lib") {
+        include("*.jar")
+    })
+}
+
+repositories {
+    mavenCentral()
+
+    flatDir {
+        dirs("libs")
+    }
 }
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.app.App"
+    mainClass = "org.example.app.Main"
+}
+
+tasks.jar {
+    manifest {
+        attributes(mapOf(
+            "Main-Class" to "org.example.app.Main",
+            "Implementation-Title" to "ELibrary Parser"
+        ))
+    }
+
+    // Включаем все зависимости в JAR
+    val dependencies = configurations.runtimeClasspath.get()
+        .map { if (it.isDirectory) it else zipTree(it) }
+
+    from(dependencies)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    // ЯВНО указываем зависимости на другие модули
+    dependsOn(":utilities:jar")
+    dependsOn(":list:jar")  // Добавьте если используете
+
+    finalizedBy("createBatchFile", "copyJavaFX")
+}
+
+// Альтернативная версия с явными провайдерами
+tasks.register("createBatchFile") {
+    val outputFile = layout.buildDirectory.file("libs/RUN.bat")
+
+    outputs.file(outputFile)
+
+    doLast {
+        val batFile = outputFile.get().asFile
+        batFile.parentFile.mkdirs()
+
+        batFile.writeText("""
+@echo off
+title ELibrary Parser
+echo Starting ELibrary Parser...
+java --module-path "javafx-sdk-25.0.1/lib" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics -jar app.jar
+pause
+""".trimIndent())
+
+        println("Batch file created: ${batFile.absolutePath}")
+    }
+}
+
+tasks.register<Copy>("copyJavaFX") {
+    val javafxSourceDir = layout.projectDirectory.dir("libs/javafx-sdk-25.0.1")
+    val javafxTargetDir = layout.buildDirectory.dir("libs/javafx-sdk-25.0.1")
+
+    from(javafxSourceDir)
+    into(javafxTargetDir)
+
+    inputs.dir(javafxSourceDir)
+    outputs.dir(javafxTargetDir)
 }
