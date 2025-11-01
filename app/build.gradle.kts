@@ -41,6 +41,10 @@ dependencies {
     testRuntimeOnly(files(
         "libs/JUnit/junit-platform-launcher-1.13.4.jar"
     ))
+
+    implementation(fileTree("libs/javafx-sdk-25.0.1/lib") {
+        include("*.jar")
+    })
 }
 
 repositories {
@@ -74,4 +78,39 @@ tasks.jar {
     // ЯВНО указываем зависимости на другие модули
     dependsOn(":utilities:jar")
     dependsOn(":list:jar")  // Добавьте если используете
+
+    finalizedBy("createBatchFile", "copyJavaFX")
+}
+
+// Альтернативная версия с явными провайдерами
+tasks.register("createBatchFile") {
+    val outputFile = layout.buildDirectory.file("libs/RUN.bat")
+
+    outputs.file(outputFile)
+
+    doLast {
+        val batFile = outputFile.get().asFile
+        batFile.parentFile.mkdirs()
+
+        batFile.writeText("""
+@echo off
+title ELibrary Parser
+echo Starting ELibrary Parser...
+java --module-path "javafx-sdk-25.0.1/lib" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics -jar app.jar
+pause
+""".trimIndent())
+
+        println("Batch file created: ${batFile.absolutePath}")
+    }
+}
+
+tasks.register<Copy>("copyJavaFX") {
+    val javafxSourceDir = layout.projectDirectory.dir("libs/javafx-sdk-25.0.1")
+    val javafxTargetDir = layout.buildDirectory.dir("libs/javafx-sdk-25.0.1")
+
+    from(javafxSourceDir)
+    into(javafxTargetDir)
+
+    inputs.dir(javafxSourceDir)
+    outputs.dir(javafxTargetDir)
 }
