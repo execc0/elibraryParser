@@ -56,7 +56,6 @@ repositories {
 }
 
 application {
-    // Define the main class for the application.
     mainClass = "org.example.app.Main"
 }
 
@@ -68,21 +67,18 @@ tasks.jar {
         ))
     }
 
-    // Включаем все зависимости в JAR
     val dependencies = configurations.runtimeClasspath.get()
         .map { if (it.isDirectory) it else zipTree(it) }
 
     from(dependencies)
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
-    // ЯВНО указываем зависимости на другие модули
     dependsOn(":utilities:jar")
-    dependsOn(":list:jar")  // Добавьте если используете
+    dependsOn(":list:jar")
 
     finalizedBy("createBatchFile", "copyJavaFX")
 }
 
-// Альтернативная версия с явными провайдерами
 tasks.register("createBatchFile") {
     val outputFile = layout.buildDirectory.file("libs/RUN.bat")
 
