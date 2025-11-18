@@ -171,6 +171,17 @@ public class Main extends Application {
         File selectedFile = showFileChooser(stage, "Select input file", "Text files (*.txt)", "*.txt");
 
         if (selectedFile != null) {
+            String fileName = selectedFile.getName().toLowerCase();
+
+            if (!fileName.endsWith(".txt")) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Предупреждение");
+                alert.setHeaderText("Внимание!");
+                alert.setContentText("Формат файла должен быть txt!");
+                alert.showAndWait();
+                return;
+            }
+
             textPathToInputFile.setText(selectedFile.getAbsolutePath());
             logger.info("Для получения информации выбран файл: {}", textPathToInputFile.getText());
         }
@@ -185,6 +196,17 @@ public class Main extends Application {
         File selectedFile = showFileChooser(stage, "Select output file", "JSON files (*.json)", "*.json");
 
         if (selectedFile != null) {
+            String fileName = selectedFile.getName().toLowerCase();
+
+            if (!fileName.endsWith(".json")) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Предупреждение");
+                alert.setHeaderText("Внимание!");
+                alert.setContentText("Формат файла должен быть json!");
+                alert.showAndWait();
+                return;
+            }
+
             textPathToOutputFile.setText(selectedFile.getAbsolutePath());
             logger.info("Для вывода информации выбран файл: {}", textPathToOutputFile.getText());
         }
@@ -281,6 +303,9 @@ public class Main extends Application {
      * в виде объекта класса {@link AuthorData}.
      */
     protected Map<String, AuthorData> processAuthors(List<String> authors) {
+        if (textProcessedFile != null)
+            textProcessedFile.setText("");
+
         SiteParser siteParser = new SiteParser();
 
         Map<String, AuthorData> authorsData = authors.stream()
@@ -308,6 +333,9 @@ public class Main extends Application {
                         Map.Entry::getKey,
                         Map.Entry::getValue
                 ));
+
+        if (textProcessedFile != null)
+            textProcessedFile.setText(authorsData.size() + "/" + authors.size());
 
         logger.info("Обработано авторов: {}/{}", authorsData.size(), authors.size());
         return authorsData;
