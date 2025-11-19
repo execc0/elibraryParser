@@ -1,0 +1,778 @@
+2025-11-18 16:19:05.818 [Test worker] WARN  org.example.app.FileWorker - Файл не существует: test_nonexist_file.txt
+2025-11-18 16:19:05.882 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-630986453816787822\test_file.txt обработан.
+2025-11-18 16:19:05.964 [Test worker] ERROR org.example.app.FileWorker - Ошибка сохранения файла: 
+java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null
+	at java.base/java.io.Writer.write(Writer.java:248)
+	at org.example.app.FileWorker.saveToFile(FileWorker.java:88)
+	at org.example.app.FileWorkerTest.lambda$saveToFile_NullArgument_NoException$0(FileWorkerTest.java:63)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at org.example.app.FileWorkerTest.saveToFile_NullArgument_NoException(FileWorkerTest.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:787)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:478)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$4(TestMethodTestDescriptor.java:221)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:217)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:159)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:157)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:230)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:204)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:172)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:101)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:64)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:150)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:63)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:109)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:91)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:135)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:104)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2025-11-18 16:19:06.135 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-16317988167167952082\test_empty_file.txt обработан.
+2025-11-18 16:19:06.287 [Test worker] INFO  org.example.app.FileWorker - Данные сохранены в файл C:\Users\ivanp\AppData\Local\Temp\junit-1848923439715667342\test_output_file.json
+2025-11-18 16:19:07.247 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:19:07.254 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:19:07.258 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:19:07.262 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:19:11.555 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:19:12.830 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:19:12.831 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:19:12.836 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:19:12.837 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:19:12.838 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:19:12.839 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:19:12.851 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:19:12.859 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:19:12.860 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:19:12.862 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:19:12.863 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:19:12.864 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:19:12.865 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:19:12.865 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:19:12.869 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:19:12.869 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:19:12.870 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:19:12.872 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:19:12.875 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:19:12.875 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:19:12.875 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:19:12.877 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:19:12.881 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:19:12.881 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:19:12.884 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:19:12.884 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:19:12.885 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:19:12.923 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:19:12.924 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:19:12.925 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:19:12.925 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:19:12.939 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:19:12.952 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:19:12.957 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:19:12.974 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:19:12.978 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:19:12.979 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:19:12.983 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:19:12.984 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:19:12.986 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:19:13.564 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:19:14.234 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:19:14.234 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:19:14.235 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:19:14.235 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:19:14.237 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:19:14.237 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:19:14.238 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:19:14.239 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:19:14.239 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:19:14.240 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:19:14.242 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:19:14.243 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:19:14.243 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:19:14.243 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:19:14.245 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:19:14.245 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:19:14.245 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:19:14.246 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:19:14.248 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:19:14.248 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:19:14.249 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:19:14.249 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:19:14.251 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:19:14.251 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:19:14.253 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:19:14.254 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:19:14.257 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:19:14.259 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:19:14.261 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:19:14.262 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:19:14.262 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:19:14.263 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:19:14.264 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:19:14.264 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:19:14.264 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:19:14.265 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:19:14.265 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:19:14.387 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:19:14.390 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СОВРЕМЕННЫЕ АСПЕКТЫ КИБЕРБЕЗОПАСНОСТИ И ЗАЩИТЫ ДАННЫХ
+2025-11-18 16:19:14.391 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОММУНИКАЦИЯ В КОНТЕКСТЕ ЦИФРОВИЗАЦИИ И МЕДИАТИЗАЦИИ
+2025-11-18 16:19:14.397 [Test worker] WARN  org.example.app.SiteParser - Для автора null не был вычислен индекс Хирша.
+2025-11-18 16:19:14.401 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:19:14.403 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:19:15.076 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:19:16.053 [Test worker] WARN  org.example.app.SiteParser - Не удалось извлечь имя автора из заголовка: 
+2025-11-18 16:19:16.181 [Test worker] WARN  org.example.app.SiteParser - Передан null authorData
+2025-11-18 16:20:05.451 [Test worker] WARN  org.example.app.FileWorker - Файл не существует: test_nonexist_file.txt
+2025-11-18 16:20:05.476 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-12297337113073113685\test_file.txt обработан.
+2025-11-18 16:20:05.482 [Test worker] ERROR org.example.app.FileWorker - Ошибка сохранения файла: 
+java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null
+	at java.base/java.io.Writer.write(Writer.java:248)
+	at org.example.app.FileWorker.saveToFile(FileWorker.java:88)
+	at org.example.app.FileWorkerTest.lambda$saveToFile_NullArgument_NoException$0(FileWorkerTest.java:63)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at org.example.app.FileWorkerTest.saveToFile_NullArgument_NoException(FileWorkerTest.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:787)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:478)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$4(TestMethodTestDescriptor.java:221)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:217)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:159)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:157)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:230)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:204)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:172)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:101)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:64)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:150)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:63)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:109)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:91)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:135)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:104)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2025-11-18 16:20:05.489 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-10400732381008791293\test_empty_file.txt обработан.
+2025-11-18 16:20:05.493 [Test worker] INFO  org.example.app.FileWorker - Данные сохранены в файл C:\Users\ivanp\AppData\Local\Temp\junit-18429943284644742029\test_output_file.json
+2025-11-18 16:20:05.578 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:20:05.580 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:20:05.583 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:20:05.585 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:20:06.583 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:20:07.350 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:20:07.351 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:20:07.351 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:20:07.351 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:20:07.353 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:20:07.353 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:20:07.354 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:20:07.356 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:20:07.356 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:20:07.357 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:20:07.359 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:20:07.359 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:20:07.360 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:20:07.362 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:20:07.363 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:20:07.365 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:20:07.365 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:20:07.366 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:20:07.368 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:20:07.368 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:20:07.369 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:20:07.372 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:20:07.372 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:20:07.372 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:20:07.374 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:20:07.374 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:20:07.375 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:20:07.375 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:20:07.375 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:20:07.375 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:20:07.376 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:20:07.376 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:20:07.376 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:20:07.376 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:20:07.376 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:20:07.376 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:20:07.377 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:20:07.378 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:20:07.379 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:20:07.379 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:20:07.743 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:20:08.177 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:20:08.177 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:20:08.179 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:20:08.185 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:20:08.187 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:20:08.188 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:20:08.189 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:20:08.189 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:20:08.190 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:20:08.191 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:20:08.191 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:20:08.192 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:20:08.192 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:20:08.192 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:20:08.192 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:20:08.192 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:20:08.192 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:20:08.192 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:20:08.193 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:20:08.193 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:20:08.193 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:20:08.193 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:20:08.193 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:20:08.195 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:20:08.195 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:20:08.195 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:20:08.195 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:20:08.195 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:20:08.195 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:20:08.196 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:20:08.196 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:20:08.196 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:20:08.197 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:20:08.197 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:20:08.198 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:20:08.198 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:20:08.198 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:20:08.211 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:20:08.212 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СОВРЕМЕННЫЕ АСПЕКТЫ КИБЕРБЕЗОПАСНОСТИ И ЗАЩИТЫ ДАННЫХ
+2025-11-18 16:20:08.212 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОММУНИКАЦИЯ В КОНТЕКСТЕ ЦИФРОВИЗАЦИИ И МЕДИАТИЗАЦИИ
+2025-11-18 16:20:08.215 [Test worker] WARN  org.example.app.SiteParser - Для автора null не был вычислен индекс Хирша.
+2025-11-18 16:20:08.217 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:20:08.219 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:20:08.731 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:20:09.194 [Test worker] WARN  org.example.app.SiteParser - Не удалось извлечь имя автора из заголовка: 
+2025-11-18 16:20:09.198 [Test worker] WARN  org.example.app.SiteParser - Передан null authorData
+2025-11-18 16:24:14.896 [Test worker] WARN  org.example.app.FileWorker - Файл не существует: test_nonexist_file.txt
+2025-11-18 16:24:14.925 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-4840210700026900910\test_file.txt обработан.
+2025-11-18 16:24:14.933 [Test worker] ERROR org.example.app.FileWorker - Ошибка сохранения файла: 
+java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null
+	at java.base/java.io.Writer.write(Writer.java:248)
+	at org.example.app.FileWorker.saveToFile(FileWorker.java:88)
+	at org.example.app.FileWorkerTest.lambda$saveToFile_NullArgument_NoException$0(FileWorkerTest.java:63)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at org.example.app.FileWorkerTest.saveToFile_NullArgument_NoException(FileWorkerTest.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:787)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:478)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$4(TestMethodTestDescriptor.java:221)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:217)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:159)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:157)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:230)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:204)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:172)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:101)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:64)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:150)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:63)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:109)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:91)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:135)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:104)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2025-11-18 16:24:14.941 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-18032364116476200068\test_empty_file.txt обработан.
+2025-11-18 16:24:14.946 [Test worker] INFO  org.example.app.FileWorker - Данные сохранены в файл C:\Users\ivanp\AppData\Local\Temp\junit-16896722900248714991\test_output_file.json
+2025-11-18 16:24:14.956 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=1287962
+2025-11-18 16:24:16.045 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:24:16.237 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА МЕТОДА ФОРМИРОВАНИЯ ОБЩЕГО СЕТЕВОГО КЛЮЧА В ПРОТОКОЛЕ OWE В WI-FI СЕТЯХ
+2025-11-18 16:24:16.237 [Test worker] INFO  org.example.app.Main - Обработан автор: 1287962
+2025-11-18 16:24:16.239 [Test worker] INFO  org.example.app.Main - Обработано авторов: 1/1
+2025-11-18 16:24:16.243 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:24:16.245 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:24:16.246 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:24:16.248 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:24:16.629 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:24:17.080 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:24:17.081 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:24:17.082 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:24:17.083 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:24:17.084 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:24:17.085 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:24:17.086 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:24:17.087 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:24:17.088 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:24:17.089 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:24:17.090 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:24:17.091 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:24:17.092 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:24:17.093 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:24:17.094 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:24:17.096 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:24:17.097 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:24:17.098 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:24:17.098 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:24:17.099 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:24:17.100 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:24:17.100 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:24:17.101 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:24:17.101 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:24:17.102 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:24:17.103 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:24:17.103 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:24:17.104 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:24:17.104 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:24:17.105 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:24:17.106 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:24:17.106 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:24:17.106 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:24:17.107 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:24:17.107 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:24:17.108 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:24:17.108 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:24:17.109 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:24:17.110 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:24:17.111 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:24:17.428 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:24:17.885 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:24:17.888 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:24:17.889 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:24:17.891 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:24:17.891 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:24:17.892 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:24:17.894 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:24:17.894 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:24:17.894 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:24:17.894 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:24:17.897 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:24:17.899 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:24:17.899 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:24:17.900 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:24:17.900 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:24:17.900 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:24:17.900 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:24:17.902 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:24:17.903 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:24:17.903 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:24:17.903 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:24:17.904 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:24:17.904 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:24:17.904 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:24:17.905 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:24:17.905 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:24:17.906 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:24:17.906 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:24:17.907 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:24:17.907 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:24:17.907 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:24:17.908 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:24:17.908 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:24:17.908 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:24:17.909 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:24:17.910 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:24:17.910 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:24:17.922 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:24:17.922 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СОВРЕМЕННЫЕ АСПЕКТЫ КИБЕРБЕЗОПАСНОСТИ И ЗАЩИТЫ ДАННЫХ
+2025-11-18 16:24:17.923 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОММУНИКАЦИЯ В КОНТЕКСТЕ ЦИФРОВИЗАЦИИ И МЕДИАТИЗАЦИИ
+2025-11-18 16:24:17.925 [Test worker] WARN  org.example.app.SiteParser - Для автора null не был вычислен индекс Хирша.
+2025-11-18 16:24:17.932 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:24:17.933 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:24:18.214 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:24:18.686 [Test worker] WARN  org.example.app.SiteParser - Не удалось извлечь имя автора из заголовка: 
+2025-11-18 16:24:18.689 [Test worker] WARN  org.example.app.SiteParser - Передан null authorData
+2025-11-18 16:36:44.294 [Test worker] WARN  org.example.app.FileWorker - Файл не существует: test_nonexist_file.txt
+2025-11-18 16:36:44.323 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-12661615214700901074\test_file.txt обработан.
+2025-11-18 16:36:44.330 [Test worker] ERROR org.example.app.FileWorker - Ошибка сохранения файла: 
+java.lang.NullPointerException: Cannot invoke "String.length()" because "str" is null
+	at java.base/java.io.Writer.write(Writer.java:248)
+	at org.example.app.FileWorker.saveToFile(FileWorker.java:88)
+	at org.example.app.FileWorkerTest.lambda$saveToFile_NullArgument_NoException$0(FileWorkerTest.java:63)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at org.example.app.FileWorkerTest.saveToFile_NullArgument_NoException(FileWorkerTest.java:62)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:787)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:478)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$4(TestMethodTestDescriptor.java:221)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:217)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:159)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:157)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:161)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:147)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:145)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:101)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:230)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:204)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:172)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:101)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:64)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:150)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:63)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:109)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:91)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:135)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:104)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:194)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2025-11-18 16:36:44.337 [Test worker] INFO  org.example.app.FileWorker - Файл: C:\Users\ivanp\AppData\Local\Temp\junit-2959524607760176256\test_empty_file.txt обработан.
+2025-11-18 16:36:44.342 [Test worker] INFO  org.example.app.FileWorker - Данные сохранены в файл C:\Users\ivanp\AppData\Local\Temp\junit-10503537034701783224\test_output_file.json
+2025-11-18 16:36:44.352 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=1287962
+2025-11-18 16:36:45.563 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:36:45.787 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА МЕТОДА ФОРМИРОВАНИЯ ОБЩЕГО СЕТЕВОГО КЛЮЧА В ПРОТОКОЛЕ OWE В WI-FI СЕТЯХ
+2025-11-18 16:36:45.787 [Test worker] INFO  org.example.app.Main - Обработан автор: 1287962
+2025-11-18 16:36:45.788 [Test worker] INFO  org.example.app.Main - Обработано авторов: 1/1
+2025-11-18 16:36:45.792 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:36:45.794 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:36:45.796 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:36:45.798 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:36:46.171 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:36:46.644 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:36:46.645 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:36:46.646 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:36:46.647 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:36:46.649 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:36:46.650 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:36:46.651 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:36:46.651 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:36:46.652 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:36:46.653 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:36:46.654 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:36:46.655 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:36:46.655 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:36:46.657 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:36:46.658 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:36:46.660 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:36:46.661 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:36:46.662 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:36:46.662 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:36:46.664 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:36:46.664 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:36:46.665 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:36:46.667 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:36:46.668 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:36:46.669 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:36:46.670 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:36:46.670 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:36:46.671 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:36:46.672 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:36:46.672 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:36:46.673 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:36:46.674 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:36:46.674 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:36:46.675 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:36:46.676 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:36:46.676 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:36:46.677 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:36:46.680 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:36:46.680 [Test worker] WARN  org.example.app.SiteParser - Передан пустой authorID
+2025-11-18 16:36:46.683 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:36:47.397 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:36:48.107 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНЖЕНЕРНАЯ И КОМПЬЮТЕРНАЯ ГРАФИКА. РАБОТА В ПРОГРАММЕ КОМПАС-3D
+2025-11-18 16:36:48.107 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:36:48.108 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СИСТЕМА ЭЛЕКТРОННОГО ДОКУМЕНТООБОРТА НА BLOCKCHAIN
+2025-11-18 16:36:48.108 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОВЕРКИ РАБОТ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:36:48.108 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОБЛЕМЫ АВТОМАТИЗАЦИИ СИНТЕЗА ВАРИАНТОВ ЗАДАНИЙ ПО ИНЖЕНЕРНОЙ И КОМПЬЮТЕРНОЙ ГРАФИКЕ
+2025-11-18 16:36:48.109 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВИЗУАЛЬНЫХ СИСТЕМ ДЛЯ МОНИТОРИНГА ПЕРСОНАЛА И РАБОЧИХ ПРОЦЕССОВ
+2025-11-18 16:36:48.109 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РАЗРАБОТКА ПРОТОТИПА ВЕБ-ИНТЕРФЕЙСА ДЛЯ ВИЗУАЛИЗАЦИИ ДАННЫХ О ВЕБ-УЯЗВИМОСТЯХ
+2025-11-18 16:36:48.109 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ВЕБ-СЕРВИСОВ И МОБИЛЬНЫХ ПРИЛОЖЕНИЙ ДЛЯ УЛУЧШЕНИЯ КАЧЕСТВА ЖИЗНИ ЛЮДЕЙ С НАРУШЕННЫМ СЛУХОМ
+2025-11-18 16:36:48.109 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АДАПТАЦИЯ FDM 3D-ПРИНТЕРА ПОД ПЕЧАТЬ ПЛАСТИКОВОЙ НИТЬЮ ИЗ ПЕРЕРАБОТАННОГО МАТЕРИАЛА
+2025-11-18 16:36:48.109 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СРАВНИТЕЛЬНЫЙ АНАЛИЗ РЕДАКТОРОВ УРОВНЕЙ В РЕАЛИСТИЧНЫХ СИМУЛЯТОРАХ БПЛА
+2025-11-18 16:36:48.111 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ТЕХНОЛОГИИ НЕЙРОСЕТЕЙ ПРИ ТЕКСТУРИРОВАНИИ ОБЪЕКТОВ ТРЕХМЕРНОЙ ГРАФИКИ
+2025-11-18 16:36:48.111 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ОСОБЕННОСТЕЙ БЛОКЧЕЙН-СИСТЕМЫ ДЛЯ ХРАНЕНИЯ И ИСПОЛЬЗОВАНИЯ АРХИВНЫХ ДАННЫХ В ОБРАЗОВАТЕЛЬНОЙ СФЕРЕ
+2025-11-18 16:36:48.111 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье БАННЕРНАЯ СЛЕПОТА
+2025-11-18 16:36:48.111 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье МЕЖДИСЦИПЛИНАРНАЯ ИНТЕГРАЦИЯ В ПРОЕКТНОМ КОМПОНЕНТЕ ОБРАЗОВАТЕЛЬНОГО ПРОЦЕССА НА ОСНОВЕ VR-ТЕХНОЛОГИЙ
+2025-11-18 16:36:48.112 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ СОВРЕМЕННОГО УРОВНЯ РАЗВИТИЯ ТЕХНОЛОГИЙ СОЗДАНИЯ ИНТЕРАКТИВНОГО ВИЗУАЛЬНОГО КОНТЕНТА
+2025-11-18 16:36:48.112 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СТРАТЕГИЯ ПОЗИЦИОНИРОВАНИЯ IT ПРОДУКТА НА ПРИМЕРЕ ПРИЛОЖЕНИЯ DEVICE INSTRUCTION AR
+2025-11-18 16:36:48.112 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ, МОДЕЛИРОВАНИЯ И ВИЗУАЛИЗАЦИИ УПАКОВКИ ДЛЯ ТЕЛЕКОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ
+2025-11-18 16:36:48.112 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА РАЗРАБОТКИ ГРАФИЧЕСКИХ ЭЛЕМЕНТОВ ДЛЯ ЛОГОТИПИРОВАНИЯ
+2025-11-18 16:36:48.113 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ПРОГРАММА ПРОЕКТИРОВАНИЯ ПРОЗРАЧНЫХ ЭЛЕМЕНТОВ КОММУНИКАЦИОННОГО ОБОРУДОВАНИЯ И ТЕЛЕКОММУНИКАЦИОННЫХ ПОМЕЩЕНИЙ
+2025-11-18 16:36:48.113 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье РОЛЬ SEO И ДИЗАЙНА САЙТА В СФЕРЕ ПОИСКОВОГО ПРОДВИЖЕНИЯ
+2025-11-18 16:36:48.113 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ ПЛАТФОРМ ОБРАТНОЙ СВЯЗИ МЕЖДУ ГРАЖДАНАМИ И ОРГАНАМИ ВЛАСТИ В РАМКАХ НАЦИОНАЛЬНОГО ПРОЕКТА «ЦИФРОВАЯ ЭКОНОМИКА»
+2025-11-18 16:36:48.113 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ И РАЗРАБОТКА ПЕЧАТНЫХ ИНФОРМАЦИОННЫХ МАТЕРИАЛОВ ДЛЯ УЧРЕЖДЕНИЙ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ
+2025-11-18 16:36:48.114 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:36:48.114 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОНТЕЙНЕРИЗАЦИЯ ДЛЯ АНАЛИЗА БОЛЬШИХ ДАННЫХ НА ПРИМЕРЕ KUBERNETES И DOCKER
+2025-11-18 16:36:48.114 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СПЕЦИФИКА ВОСПРИЯТИЯ ОПТИЧЕСКИХ ИЛЛЮЗИЙ КОМПЬЮТЕРНЫМ ЗРЕНИЕМ
+2025-11-18 16:36:48.114 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АНАЛИЗ МЕТОДОЛОГИЙ РАЗРАБОТКИ IT-ПРОЕКТОВ И РАЗРАБОТКА AGILE-КОНЦЕПЦИИ ДЛЯ НАЧИНАЮЩЕЙ КОМАНДЫ РАЗРАБОТЧИКОВ ПРОГРАММНЫХ СРЕДСТВ
+2025-11-18 16:36:48.115 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВЛИЯНИЕ ГОЛОСОВЫХ ЗАПРОСОВ НА SEO
+2025-11-18 16:36:48.115 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье "УМНЫЙ ДОМ" ДЛЯ ЛЮДЕЙ С ОГРАНИЧЕННЫМИ ВОЗМОЖНОСТЯМИ
+2025-11-18 16:36:48.116 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИСПОЛЬЗОВАНИЕ ВОЗМОЖНОСТЕЙ ОБЛАЧНОГО СЕРВИСА БИТРИКС24 ДЛЯ СОВМЕСТНОЙ РАБОТЫ КОМАНДЫ ВЕБ-РАЗРАБОТЧИКОВ
+2025-11-18 16:36:48.117 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭРГОНОМИКА В WEB-ДИЗАЙНЕ
+2025-11-18 16:36:48.117 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье АВТОМАТИЗАЦИЯ ПРОИЗВОДСТВЕННОГО ПРОЦЕССА ЗАПОЛНЕНИЯ КОРОБА ПРОДУКЦИЕЙ НА ПОЛИГРАФИЧЕСКОМ ПРОИЗВОДСТВЕ
+2025-11-18 16:36:48.118 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ВОЗМОЖНОСТИ РАЗРАБОТКИ И МОДЕЛИРОВАНИЯ ИНТЕЛЛЕКТУАЛЬНОЙ ИНФОРМАЦИОННОЙ СИСТЕМЫ ПО ФОРМИРОВАНИЮ РЕКОМЕНДАЦИЙ СТУДЕНТАМ ДЛЯ ВЫБОРА ФАКУЛЬТАТИВОВ
+2025-11-18 16:36:48.118 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ СТУДЕНТОВ ВУЗОВ
+2025-11-18 16:36:48.119 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ В РАЗВИВАЮЩЕМ И ЛИЧНОСТНО-ОРИЕНТИРОВАННОМ ОБУЧЕНИИ
+2025-11-18 16:36:48.119 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ТЕХНОЛОГИЯ ПРОЕКТИРОВАНИЯ И ПРОВЕДЕНИЯ ЭКСПЕРИМЕНТАЛЬНОГО РЕШЕНИЯ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ
+2025-11-18 16:36:48.121 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье УЧЕБНЫЕ ИССЛЕДОВАТЕЛЬСКИЕ ЗАДАНИЯ ПО ЭКСПЕРИМЕНТАЛЬНОМУ РЕШЕНИЮ ФИЗИКО-ТЕХНИЧЕСКИХ ЗАДАЧ ЭЛЕКТРОНИКИ
+2025-11-18 16:36:48.122 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ЭКСПЕРИМЕНТАЛЬНОЕ РЕШЕНИЕ ЗАДАЧ МАТЕРИАЛОВЕДЕНИЯ КАК СРЕДСТВО РАЗВИТИЯ ИНТЕЛЛЕКТУАЛЬНОЙ И ТВОРЧЕСКОЙ АКТИВНОСТИ УЧАЩИХСЯ
+2025-11-18 16:36:48.130 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ
+2025-11-18 16:36:48.130 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье СОВРЕМЕННЫЕ АСПЕКТЫ КИБЕРБЕЗОПАСНОСТИ И ЗАЩИТЫ ДАННЫХ
+2025-11-18 16:36:48.133 [Test worker] INFO  org.example.app.Publication - Установлено количество цитирований для статье КОММУНИКАЦИЯ В КОНТЕКСТЕ ЦИФРОВИЗАЦИИ И МЕДИАТИЗАЦИИ
+2025-11-18 16:36:48.136 [Test worker] WARN  org.example.app.SiteParser - Для автора null не был вычислен индекс Хирша.
+2025-11-18 16:36:48.142 [Test worker] WARN  org.example.app.SiteParser - Переданный authorID не является корректным
+2025-11-18 16:36:48.145 [Test worker] INFO  org.example.app.SiteParser - Выполнение запроса к: https://www.elibrary.ru/author_items.asp?authorid=482409
+2025-11-18 16:36:48.550 [Test worker] INFO  org.example.app.SiteParser - Соединение с сайтом установлено, статус: 200
+2025-11-18 16:36:48.894 [Test worker] WARN  org.example.app.SiteParser - Не удалось извлечь имя автора из заголовка: 
+2025-11-18 16:36:48.896 [Test worker] WARN  org.example.app.SiteParser - Передан null authorData
