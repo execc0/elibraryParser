@@ -3,7 +3,7 @@
 ## Build
 
 ### Requirements
-jdk 24+
+* jdk 24+
 
 ### Window
 If you are using Windows, follow these steps:
