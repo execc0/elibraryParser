@@ -37,6 +37,9 @@ public class Main extends Application {
     private int authorsCount;
     private int authorsSuccessProcessed;
 
+    /**
+     * Основной метод графического приложения, написанного на JavaFX
+     */
     @Override
     public void start(Stage stage) {
         logger.info("Приложение запущено");
@@ -54,6 +57,9 @@ public class Main extends Application {
         stage.show();
     }
 
+    /**
+     * Метод, отвечающий за создание наполнения графического окна.
+     */
     private Pane createContent(Stage stage) {
         Pane rootPane = new Pane();
 
@@ -341,6 +347,9 @@ public class Main extends Application {
         return authorsData;
     }
 
+    /**
+     * Точка входа приложения.
+     */
     public static void main(String[] args) {
         launch(args);
     }

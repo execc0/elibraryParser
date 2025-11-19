@@ -20,13 +20,19 @@ public class Publication {
 
     private static final Logger logger = LogManager.getLogger(Publication.class);
 
+    /** Метод, который возвращает название публикации.*/
     public String getTitle() { return title; }
+    /** Место, который устанавливает название публикации.*/
     public void setTitle(String title) { this.title = title; }
 
+    /** Метод, который возвращает количество цитирований публикации.*/
     public int getCitations() { return citations; }
+    /** Место, который устанавливает количество цитирований публикации.*/
     public void setCitations(int citations) { this.citations = citations; }
 
+    /** Метод, который возвращает дополнительную информацию о публикации (место публикации и дату).*/
     public String getPublicationDetails() { return publicationDetails; }
+    /** Место, который устанавливает дополнительную информацию о публикации (место публикации и дату).*/
     public void setPublicationDetails(String publicationDetails) { this.publicationDetails = publicationDetails; }
 
     /**
