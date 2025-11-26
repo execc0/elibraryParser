@@ -27,7 +27,8 @@ If you experience the following error on Linux or macOS:
 
     Graphics Device initialization failed for :  es2, sw
     Error initializing QuantumRenderer: no suitable pipeline found ...
-Then replace the JavaFX SDK in the app/build/libs directory with the Linux version. https://jdk.java.net/javafx25/
+    
+Then replace the JavaFX SDK in the __*app/build/libs*__ directory with the version for your operating system. https://jdk.java.net/javafx25/
 
 
 ## Testing
