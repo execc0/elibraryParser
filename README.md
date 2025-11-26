@@ -16,6 +16,9 @@ And then just run RUN.bat
 If you want to build this project on Linux or Mac, follow these steps:
 
     ./gradlew build
+    cd app/build/libs
+    chmod +x RUN.sh
+    
 And then just run RUN.sh
 
 If you experience the following error on Linux or macOS:
