@@ -22,6 +22,7 @@ If you want to build this project on Linux or Mac, follow these steps:
     
 And then just run RUN.sh
 
+### Potential problem
 If you experience the following error on Linux or macOS:
 
     Graphics Device initialization failed for :  es2, sw
