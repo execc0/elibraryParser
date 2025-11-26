@@ -9,6 +9,7 @@
 If you are using Windows, follow these steps:
 
     .\gradlew.bat build
+    cd app\build\libs
 
 And then just run RUN.bat
     
