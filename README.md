@@ -4,7 +4,7 @@
 
 ### Requirements
 * jdk 24+
-卍
+卍 так делать нельзя!
 ### Window
 If you are using Windows, follow these steps:
 
