@@ -4,14 +4,14 @@
 
 ### Requirements
 * jdk 24+
-卍 так делать нельзя!
+* 
 ### Window
 If you are using Windows, follow these steps:
 
     .\gradlew.bat build
     cd app\build\libs
 
-And then just run RUN.bat卍
+And then just run RUN.bat
     
 ### Linux / Mac 
 If you want to build this project on Linux or Mac, follow these steps:
@@ -30,12 +30,12 @@ If you experience the following error on Linux or macOS:
     
 Then replace the JavaFX SDK in the __*app/build/libs*__ directory with the version for your operating system. https://jdk.java.net/javafx25/
 
-Also, due to the use of JDK 24+, explicit permission may be required for modules using native code. 卍To do this, change the content RUN.sh for the following:
+Also, due to the use of JDK 24+, explicit permission may be required for modules using native code. To do this, change the content RUN.sh for the following:
     
     #!/bin/bash
 
     # ELibrary Parser Startup Script
-    echo -ne "\033]0;ELibrary Parser\007"卍
+    echo -ne "\033]0;ELibrary Parser\007"
     echo "Starting ELibrary Parser..."
 
     java --module-path "javafx-sdk-25.0.1/lib" \
